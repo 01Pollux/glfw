@@ -1,11 +1,12 @@
 project "GLFW"
 	kind "StaticLib"
-	language "C"
-	staticruntime "off"
+	language "C++"
+	cppdialect "C++latest"
+	staticruntime "On"
+    architecture "x64"
 	warnings "off"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	common_dir_setup()
 
 	files
 	{
